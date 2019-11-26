@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+
+body {
+  background: rgb(204, 204, 204);
+  color: black;
+}
+
+page {
+  background: white;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+}
+
+page[size="A4"][layout="landscape"] {
+  width: 29.7cm;
+  height: 21cm;
+  padding: 0.5cm;
+}
+
+.container {
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.container div {
+  /* border: 1px solid red; */
+}
+
+.container div.table {
+  margin-right: 0.5em;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+table thead td {
+  font-weight: bold;
+  line-height: 2em;
+  background: rgb(236, 236, 236);
+}
+
+table tr {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+table tr td {
+  padding: 0.2em 0.3em;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #section-to-print,
+  #section-to-print * {
+    visibility: visible;
+  }
+
+  #section-to-print {
+    position: absolute;
+    padding: 0.25cm;
+    left: 0;
+    top: 0;
+  }
+}
+
+#section-to-print .diagram img {
+  width: 95%;
+  height: 95%;
+}
+
+#section-to-print table {
+  width: 8cm;
+}
